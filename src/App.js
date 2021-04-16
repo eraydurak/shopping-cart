@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.scss";
+import Header from "./components/Header";
+import Product from "./components/Product";
+import products from "./products.json";
 
-function App() {
+const App = () => {
+  const [money, setMoney] = useState(1000);
+  const [basket, setBasket] = useState([]);
+
+  useEffect(() => {
+    console.log(basket);
+  }, [basket]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header money={money} />
+      {products.map((product) => (
+        <Product basket={basket} setBasket={setBasket} product={product} />
+      ))}
+    </>
   );
-}
+};
 
 export default App;
