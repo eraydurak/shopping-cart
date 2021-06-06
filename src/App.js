@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import "./App.scss";
 import Header from "./components/Header";
 import Product from "./components/Product";
 import Basket from "./components/Basket";
 import products from "./products.json";
 import BasketItem from "./components/BasketItem";
+import "./App.scss";
 
 const App = () => {
   const [money, setMoney] = useState(1000000);
