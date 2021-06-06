@@ -11,10 +11,10 @@ const Basket = ({ basket, resetBasket, products, total }) => {
             item={item}
           />
         ))}
-      <div>
+      <div className="basket">
         <h3>Toplam: {total}TL</h3>
+        <button onClick={resetBasket}>Reset</button>
       </div>
-      <button onClick={resetBasket}>Reset</button>
     </>
   );
 };
