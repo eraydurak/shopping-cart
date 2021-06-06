@@ -1,0 +1,9 @@
+.money-spend {
+  font-size: 30px;
+  text-align: center;
+  span {
+    color: red;
+    font-weight: bolder;
+    transition: 0.3s all ease;
+  }
+}
