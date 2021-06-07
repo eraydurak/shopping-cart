@@ -4,5 +4,22 @@
   border: 1px solid #ddd;
   margin: 0 auto 21px auto;
   margin-bottom: 21px;
-  width: 70%;
+  max-width: 450px;
+  button {
+    background-color: rgba(131, 116, 96, 0.137);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(122, 122, 240);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px;
+    transition: 0.3s all ease;
+    &:hover {
+      color: wheat;
+      background: #000;
+      transition: 0.3s all ease;
+    }
+  }
 }
